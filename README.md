@@ -6,11 +6,26 @@ The plan is to add more features over time like web-based configuration of the f
 
 **Currently, this project is inside a beta phase.**
 
+## Screenshot
+
+![User-Page](./.github/user.page.jpg)
+
 ## Usage
 
 Install with docker compose:
 ```yaml
-todo
+services:
+  panel:
+    image: localhost:5000/radius-webadmin
+    ports:
+      - 3000:3000
+    environment:
+      - DATABASE_URL=mysql://username:password@mysql-host/radius-database
+    # enable log rotation
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
 ```
 
 ### Development
