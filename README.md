@@ -28,7 +28,7 @@ Install with docker compose:
 ```yaml
 services:
   panel:
-    image: localhost:5000/radius-webadmin
+    image: ghcr.io/trickfilm400/radius-webadmin
     ports:
       - 3000:3000
     environment:
