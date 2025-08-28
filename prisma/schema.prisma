@@ -12,28 +12,31 @@ datasource db {
 }
 
 model RadCheck {
-  id Int @id @default(autoincrement())
-  username String
+  id        Int    @id @default(autoincrement())
+  username  String
   attribute String
-  op String
-  value String
+  op        String
+  value     String
+
   @@map("radcheck")
 }
 
 model RadPostAuth {
-  id Int @id @default(autoincrement())
+  id       Int      @id @default(autoincrement())
   username String
-  pass String
-  reply String
+  pass     String
+  reply    String
   authDate DateTime
+
   @@map("radpostauth")
 }
 
 model RadReply {
-  id Int @id @default(autoincrement())
-  username String
+  id        Int    @id @default(autoincrement())
+  username  String
   attribute String
-  op String
-  value String
+  op        String
+  value     String
+
   @@map("radreply")
 }
